@@ -8,7 +8,7 @@ import org.springframework.stereotype.Service;
 public class MyFirstService {
     //field injection
     @Autowired
-    @Qualifier("bean1")
+    @Qualifier("mySecondBean")
     private MyFirstClass myFirstClass;
 
     public String tellStory(){
