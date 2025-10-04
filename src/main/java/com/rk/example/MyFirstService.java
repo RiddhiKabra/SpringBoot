@@ -20,6 +20,9 @@ public class MyFirstService {
     public String getJavaEnv(){
         return  environment.getProperty("java.version");
     }
+    public String readCustomEnvProperty(){
+        return  environment.getProperty("my.custom.property");
+    }
     public String getOsName(){
         return  environment.getProperty("os.name");
     }

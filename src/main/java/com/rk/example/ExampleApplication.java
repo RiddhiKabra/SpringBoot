@@ -16,6 +16,7 @@ public class ExampleApplication {
         System.out.println(myFirstService.tellStory());
         System.out.println(myFirstService.getJavaEnv());
         System.out.println(myFirstService.getOsName());
+        System.out.println(myFirstService.readCustomEnvProperty());
 
     }
 }
