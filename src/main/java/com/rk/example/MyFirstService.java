@@ -11,8 +11,8 @@ public class MyFirstService {
     //method injection
 
     @Autowired
-    public void injectDependency(
-            @Qualifier("bean2") MyFirstClass myFirstClass) {
+    public void setMyFirstClass(
+            @Qualifier("bean1") MyFirstClass myFirstClass) {
         this.myFirstClass = myFirstClass;
     }
 
