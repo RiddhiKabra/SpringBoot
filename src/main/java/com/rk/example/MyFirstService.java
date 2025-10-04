@@ -6,10 +6,16 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class MyFirstService {
-    //field injection
+
+    private  MyFirstClass  myFirstClass;
+    //method injection
+
     @Autowired
-    @Qualifier("bean1")
-    private MyFirstClass myFirstClass;
+    public void injectDependency(
+            @Qualifier("bean2") MyFirstClass myFirstClass) {
+        this.myFirstClass = myFirstClass;
+    }
+
 
     public String tellStory(){
         return  "The dependency is saying: " + myFirstClass.sayHello();
