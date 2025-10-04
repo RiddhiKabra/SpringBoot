@@ -14,5 +14,8 @@ public class ExampleApplication {
         System.out.println(myFirstClass.sayHello());
         MyFirstService myFirstService = ctx.getBean(MyFirstService.class);
         System.out.println(myFirstService.tellStory());
+        System.out.println(myFirstService.getJavaEnv());
+        System.out.println(myFirstService.getOsName());
+
     }
 }
