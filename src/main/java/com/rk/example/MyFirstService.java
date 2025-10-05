@@ -19,15 +19,11 @@ public class MyFirstService {
     @Autowired
     @Qualifier("mySecondBean")
     private final MyFirstClass myFirstClass;
-    @Value("RK")
+    @Value("${my.custom.property}")
     private String customProperty;
-    @Value("${my.prop}")
-    private String customPropertyFromAnotherFile;
-    @Value("${my.prop.2}")
-    private String customPropertyFromAnotherFile2;
+    @Value("${my.custom.property.int}")
+    private Integer customPropertyInt;
 
-    @Value("123")
-    private  Integer customPropertyInt;
 
     public MyFirstService(
             @Qualifier("bean1") MyFirstClass myFirstClass) {
@@ -38,12 +34,12 @@ public class MyFirstService {
         return  "The dependency is saying: " + myFirstClass.sayHello();
     }
 
-
-    public String getCustomPropertyFromAnotherFile() {
-        return customPropertyFromAnotherFile;
+    public Integer getCustomPropertyInt() {
+        return customPropertyInt;
     }
 
-    public String getCustomPropertyFromAnotherFile2() {
-        return customPropertyFromAnotherFile2;
+
+    public String getCustomProperty() {
+        return customProperty;
     }
 }
