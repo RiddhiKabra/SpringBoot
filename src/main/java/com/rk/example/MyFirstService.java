@@ -17,7 +17,7 @@ import org.springframework.stereotype.Service;
 public class MyFirstService {
     //field injection
     @Autowired
-    @Qualifier("mySecondBean")
+    @Qualifier("bean1")
     private final MyFirstClass myFirstClass;
     @Value("${my.custom.property}")
     private String customProperty;
